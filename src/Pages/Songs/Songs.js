@@ -8,6 +8,7 @@ const Songs = ({ songs }) => (
     {songs.map((song) => (
       <Card
         key={song.id}
+        id={song.id}
         albumArtUrl={song.albumArtUrl}
         songName={song.name}
         genreName={song.genre.name}

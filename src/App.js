@@ -12,6 +12,7 @@ const App = () => {
   const [error, setError] = useState(null);
   const [songs, setSongs] = useState([]);
   const [isLoaded, setIsLoaded] = useState('false');
+
   useEffect(async () => {
     try {
       const songData = await utilsApi.getSongs();

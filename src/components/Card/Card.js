@@ -1,15 +1,31 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import utilsApi from '../../utils/apiUtils';
 
 const Card = ({
-  albumArtUrl, songName, artistName,
-}) => (
-  <>
-    <img src={albumArtUrl} alt="song" />
-    <p>{songName}</p>
-    <p>{artistName}</p>
-    <hr />
-  </>
-);
+  id, albumArtUrl, songName, artistName,
+}) => {
+  const [like, setLike] = useState({});
+  // like has like,count
+
+  useEffect(async () => {
+    try {
+      const songLikes = await utilsApi.getLikes(id);
+      setLike(songLikes);
+    } catch (e) {
+    //   setError(e);
+    }
+  }, []);
+
+  return (
+    <>
+      <img src={albumArtUrl} alt="song" />
+      <p>{songName}</p>
+      <p>{artistName}</p>
+      <p>{like.count}</p>
+      <hr />
+    </>
+  );
+};
 
 export default Card;
