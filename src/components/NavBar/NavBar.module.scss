@@ -1,0 +1,17 @@
+@import "../../styles/styles.scss";
+
+.navBar{
+    background-color: $dark-background-color;
+}
+
+.navBar p{
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 1rem;
+}
+
+.bold{
+    font-weight: 1000;
+}
