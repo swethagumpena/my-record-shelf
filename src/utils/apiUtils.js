@@ -15,4 +15,12 @@ const getLikes = async (songId) => {
   return songLikes.data.data;
 };
 
-export default { getSongs, getLikes };
+const patchSongLikes = async (songId, currentState) => {
+  const likeResponse = await axios.patch(`/records/${songId}/likes`, {
+    like: !currentState,
+  });
+  const likeData = await likeResponse.data;
+  return likeData;
+};
+
+export default { getSongs, getLikes, patchSongLikes };
