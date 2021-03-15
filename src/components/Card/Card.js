@@ -35,7 +35,7 @@ const Card = ({
 };
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   albumArtUrl: PropTypes.string.isRequired,
   songName: PropTypes.string.isRequired,
   artistName: PropTypes.string.isRequired,

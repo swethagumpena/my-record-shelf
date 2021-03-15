@@ -1,11 +1,9 @@
-/* eslint-disable max-len */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import styles from './Genres.module.scss';
 
-// eslint-disable-next-line no-unused-vars
 const Genres = ({ filteredSongs }) => {
   const history = useHistory();
   const songsByCategory = Object.keys(filteredSongs).map((category) => (
@@ -48,31 +46,22 @@ const Genres = ({ filteredSongs }) => {
   );
 };
 
-// {
-//   return (
-//     <div>
-//       <div className={styles.header}>
-//         <p className={styles.heading}>genres</p>
-//         <button className={styles.toggle} type="button" onClick={() => history.push('/songs')}>X</button>
-//       </div>
+const artistShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+});
 
-//       {/* <div className={styles.songsContainer}>
-//           <div className={styles.card}>
-//             {songs.map((song) => (
-//               <Card
-//                 key={song.id}
-//                 id={song.id}
-//                 albumArtUrl={song.albumArtUrl}
-//                 songName={song.name}
-//                 genreName={song.genre.name}
-//                 artistName={song.artist.name}
-//               />
-//             ))}
-//           </div>
-//         </div> */}
+const songShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  albumArtUrl: PropTypes.string.isRequired,
+  artist: PropTypes.objectOf(artistShape),
+  genre: PropTypes.objectOf(artistShape),
+});
 
-//     </div>
-//   );
-// };
+Genres.propTypes = {
+  filteredSongs: PropTypes.objectOf(PropTypes.arrayOf(songShape)).isRequired,
+};
 
 export default Genres;

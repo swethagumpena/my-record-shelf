@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Genres should match snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="header"
+    >
+      <p
+        class="heading"
+      >
+        genres
+      </p>
+      <button
+        class="toggle"
+        type="button"
+      >
+        X
+      </button>
+    </div>
+    <div
+      class="songs"
+      data-testid="home"
+    >
+      <div>
+        <div
+          class="genreHeader"
+        >
+          <div
+            class="genreImage"
+          >
+            <img
+              alt="genre-img"
+              src="assets/genre-Bollywood.png"
+            />
+          </div>
+          <div
+            class="songsContainer"
+          >
+            Bollywood
+          </div>
+        </div>
+        <div
+          class="card"
+        >
+          <div
+            class="card"
+          >
+            <img
+              alt="song"
+              data-testid="song-image"
+              src="https://i.scdn.co/image/ab67616d0000b273dc1f496d2a8d75f7fda092b6"
+            />
+            <div
+              class="content"
+            >
+              <div
+                class="text"
+              >
+                <p
+                  class="song"
+                >
+                  Aankh Marey (From Simmba)
+                </p>
+                <p
+                  class="artist"
+                >
+                  Neha Kakkar
+                </p>
+              </div>
+              <div
+                class="likeButton"
+              >
+                <button
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

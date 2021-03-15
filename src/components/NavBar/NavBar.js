@@ -4,11 +4,9 @@ import styles from './NavBar.module.scss';
 const NavBar = () => (
   <div className={styles.navBar}>
     <p>
-      My
-      {' '}
-      <span className={styles.bold}>Record</span>
-      {' '}
-      Shelf
+      {'My '}
+      {<span className={styles.bold}>Record</span>}
+      {' Shelf'}
     </p>
   </div>
 );

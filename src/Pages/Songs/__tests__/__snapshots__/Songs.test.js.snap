@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Songs should match snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="header"
+    >
+      <p
+        class="heading"
+      >
+        all songs
+      </p>
+      <button
+        class="toggle"
+        type="button"
+      >
+        T
+      </button>
+    </div>
+    <div
+      class="songsContainer"
+    >
+      <div
+        class="card"
+      >
+        <div
+          class="card"
+        >
+          <img
+            alt="song"
+            data-testid="song-image"
+            src="https://i.scdn.co/image/ab67616d0000b273dc1f496d2a8d75f7fda092b6"
+          />
+          <div
+            class="content"
+          >
+            <div
+              class="text"
+            >
+              <p
+                class="song"
+              >
+                Aankh Marey (From Simmba)
+              </p>
+              <p
+                class="artist"
+              >
+                Neha Kakkar
+              </p>
+            </div>
+            <div
+              class="likeButton"
+            >
+              <button
+                type="button"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
