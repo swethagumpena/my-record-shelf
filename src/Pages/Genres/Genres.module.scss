@@ -1,0 +1,23 @@
+@import "../../styles/styles.scss";
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading{
+    padding: 2rem 2rem 2rem 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+p{
+    margin: 0;
+}
+
+.toggle{
+    margin-right: 5rem;
+}
