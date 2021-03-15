@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import utilsApi from '../../utils/apiUtils';
 import styles from './Card.module.scss';
 
@@ -8,8 +7,6 @@ const Card = ({
   id, albumArtUrl, songName, artistName,
 }) => {
   const [like, setLike] = useState({});
-  const [btnLike, setBtnLike] = useState(true);
-
   // like has like,count
 
   useEffect(async () => {
@@ -21,23 +18,9 @@ const Card = ({
     }
   }, []);
 
-  //   const handleChange = () => {
-  //     if (btnLike) {
-  //       console.log('trie');
-  //       likeValue += 1;
-  //       setBtnLike(false);
-  //       console.log(likeValue);
-  //     } else {
-  //       console.log('ff');
-  //       likeValue -= 1;
-  //       setBtnLike(true);
-  //       console.log(likeValue);
-  //     }
-  //   };
-
   return (
     <div className={styles.card}>
-      <img src={albumArtUrl} alt="song" />
+      <img data-testid="song-image" src={albumArtUrl} alt="song" />
       <div className={styles.content}>
         <div className={styles.text}>
           <p className={styles.song}>{songName}</p>
@@ -49,6 +32,13 @@ const Card = ({
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  albumArtUrl: PropTypes.string.isRequired,
+  songName: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired,
 };
 
 export default Card;
