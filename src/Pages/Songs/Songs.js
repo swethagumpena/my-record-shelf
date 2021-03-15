@@ -4,8 +4,12 @@ import Card from '../../components/Card/Card';
 import styles from './Songs.module.scss';
 
 const Songs = ({ songs }) => (
-  <>
-    <p className={styles.heading}>all songs</p>
+  <div>
+    <div className={styles.header}>
+      <p className={styles.heading}>all songs</p>
+      <button className={styles.toggle} type="button">T</button>
+    </div>
+
     <div className={styles.songsContainer}>
       <div className={styles.card}>
         {songs.map((song) => (
@@ -21,7 +25,7 @@ const Songs = ({ songs }) => (
       </div>
     </div>
 
-  </>
+  </div>
 );
 
 export default Songs;
