@@ -1,0 +1,45 @@
+@import "../../styles/styles.scss";
+
+.card {
+    margin: 0.5rem;
+    border-radius: 1.25rem;
+    // box-shadow: 0rem 0rem 0.25rem #9a9a9a;
+    // width: calc((100% - (8 * 0.125rem + 8 * 0.5rem)) / 4);
+    width: 21rem;
+    display: flex;
+    flex-direction: column;
+    border: 0.125rem solid lightgrey;
+    align-items: flex-start;
+    // background-color: $primary-background-color;
+    // color: $primary-text-color;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.card img{
+    width: 70%;
+    border-radius: 50%;
+    padding: 1rem;
+    align-self: center;
+}
+
+.song{
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-size: 1.1rem;
+}
+
+.artist{
+    margin: 0 1rem 2rem 1rem;
+    font-weight: bolder;
+    font-size: 0.8rem;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+}
+
+.likeButton{
+    float: left;
+}
+
