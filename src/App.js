@@ -24,7 +24,6 @@ const App = () => {
         [currentCategory]: [...prevSongsOfSameCategory, item],
       };
     }, {});
-    console.log('grouped', groupedByCategory);
     return groupedByCategory;
   };
 
