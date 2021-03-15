@@ -1,0 +1,52 @@
+@import "../../styles/styles.scss";
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: linear-gradient(#ADD2FF, white);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// .container h3 {
+//     font-family: "Inconsolata", monospace;
+//     font-size: 4.5rem;
+//     letter-spacing: 0.25vw;
+//     margin: 1rem;
+//     color: $primary-text-color;
+// }
+ 
+.container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.container button {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    background-color: #4C63AA;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+@include media-mixin($mobile-breakpoint){
+    .container h3{
+        font-size: 3rem;
+    }
+    .container p{
+        font-size: 1.5rem;
+    }
+    .container button{
+        padding: 1rem;
+    }
+}

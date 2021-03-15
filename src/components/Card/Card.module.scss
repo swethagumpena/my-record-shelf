@@ -47,4 +47,10 @@
     float: left;
 }
 
+@include media-mixin($mobile-breakpoint){
+    .card{
+        width: 21rem;
+    }
+}
+
 
