@@ -10,11 +10,14 @@ import Songs from './Pages/Songs/Songs';
 
 const App = () => {
   const [error, setError] = useState(null);
+  const [songs, setSongs] = useState([]);
   const [isLoaded, setIsLoaded] = useState('false');
   useEffect(async () => {
     try {
       const songData = await utilsApi.getSongs();
-      console.log('up', songData);
+      // console.log('up', songData);
+      setSongs(songData);
+      // console.log('heree', songs);
     } catch (e) {
       setError(e);
     }
@@ -29,7 +32,9 @@ const App = () => {
             <Landing />
           </Route>
           <Route path="/songs">
-            <Songs />
+            <Songs
+              songs={songs}
+            />
           </Route>
         </Switch>
       </BrowserRouter>
