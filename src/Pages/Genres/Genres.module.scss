@@ -21,3 +21,32 @@ p{
 .toggle{
     margin-right: 5rem;
 }
+
+.songsContainer {
+    display: flex;
+    background-color:#4C63AA;
+    padding: 0.75rem 2rem;
+    border-radius: 3rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    margin-left: -3rem;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 100rem;
+    padding: 0;
+    justify-content: center;
+}
+
+.genreHeader{
+    display: flex;
+    align-items: center;
+}
+
+.genreImage{
+    margin: 1rem 0 1rem 3rem;
+}

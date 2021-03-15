@@ -10,8 +10,16 @@ const Genres = ({ filteredSongs }) => {
   const history = useHistory();
   const songsByCategory = Object.keys(filteredSongs).map((category) => (
     <div key={category}>
-      <div className="category-name">{category}</div>
-      <div className="category-songs">
+      <div className={styles.genreHeader}>
+        <div className={styles.genreImage}>
+          <img src={`assets/genre-${category}.png`} alt="genre-img" />
+        </div>
+        <div className={styles.songsContainer}>
+          {category}
+        </div>
+      </div>
+
+      <div className={styles.card}>
         {filteredSongs[category].map((eachSong) => (
           <Card
             key={eachSong.id}
