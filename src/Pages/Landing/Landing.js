@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const LandingPage = () => {
+const Landing = () => {
   const history = useHistory();
 
   return (
@@ -12,4 +12,4 @@ const LandingPage = () => {
     </div>
   );
 };
-export default LandingPage;
+export default Landing;

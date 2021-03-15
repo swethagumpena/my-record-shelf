@@ -5,8 +5,8 @@ import './Normalize.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import utilsApi from './utils/apiUtils';
 import NavBar from './components/NavBar/NavBar';
-import LandingPage from './components/LandingPage/LandingPage';
-import SongsPage from './components/SongsPage/SongsPage';
+import Landing from './Pages/Landing/Landing';
+import Songs from './Pages/Songs/Songs';
 
 const App = () => {
   const [error, setError] = useState(null);
@@ -26,10 +26,10 @@ const App = () => {
         <NavBar />
         <Switch>
           <Route path="/" exact>
-            <LandingPage />
+            <Landing />
           </Route>
           <Route path="/songs">
-            <SongsPage />
+            <Songs />
           </Route>
         </Switch>
       </BrowserRouter>
