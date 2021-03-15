@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import styles from './Songs.module.scss';
 
 const Songs = ({ songs }) => {
-  console.log('song', songs);
   const history = useHistory();
   return (
     <div>
       <div className={styles.header}>
         <p className={styles.heading}>all songs</p>
-        <button className={styles.toggle} type="button" onClick={() => history.push('/genres')}>T</button>
+        <Link
+          to="/genres"
+          onClick={() => history.push('/genres')}
+        >
+          <img className={styles.toggleImg} src="assets/icon-genre.svg" alt="toggle view" />
+        </Link>
       </div>
 
       <div className={styles.songsContainer}>

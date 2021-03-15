@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #F5F5F5;
 }
 
 .heading{
@@ -40,16 +41,23 @@ p{
     max-width: 100rem;
     padding: 0;
     justify-content: center;
+    background-color: #F5F5F5;
 }
 
 .genreHeader{
     display: flex;
     align-items: center;
+    background-color: #F5F5F5;
 }
 
 .genreImage{
     margin: 1rem 0 1rem 3rem;
 }
+
+.toggleImg{
+    margin-right: 4rem;
+}
+
 
 @include media-mixin($mobile-breakpoint){
     .genreImage img{
