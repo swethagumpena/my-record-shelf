@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing should match snapshot 1`] = `
+<div>
+  <div
+    class="page"
+  >
+    <div
+      class="container"
+    >
+      <p>
+        :((
+      </p>
+      <p>
+        Seems a bit empty in here
+      </p>
+      <button
+        type="button"
+      >
+        sync
+      </button>
+    </div>
+  </div>
+</div>
+`;
