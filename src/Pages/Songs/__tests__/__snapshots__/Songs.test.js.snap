@@ -11,12 +11,16 @@ exports[`Songs should match snapshot 1`] = `
       >
         all songs
       </p>
-      <button
-        class="toggle"
-        type="button"
+      <a
+        href="/genres"
       >
-        T
-      </button>
+        <img
+          alt="toggle view"
+          class="toggleImg"
+          data-testid="toggle"
+          src="assets/icon-genre.svg"
+        />
+      </a>
     </div>
     <div
       class="songsContainer"

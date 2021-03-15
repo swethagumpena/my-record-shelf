@@ -40,7 +40,7 @@ const Genres = ({ filteredSongs }) => {
           to="/songs"
           onClick={() => history.push('/songs')}
         >
-          <img className={styles.toggleImg} src="assets/icon-grid.svg" alt="toggle view" />
+          <img data-testid="toggle" className={styles.toggleImg} src="assets/icon-grid.svg" alt="toggle view" />
         </Link>
       </div>
       <div data-testid="home" className="songs">

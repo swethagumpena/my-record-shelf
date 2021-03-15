@@ -11,12 +11,16 @@ exports[`Genres should match snapshot 1`] = `
       >
         genres
       </p>
-      <button
-        class="toggle"
-        type="button"
+      <a
+        href="/songs"
       >
-        X
-      </button>
+        <img
+          alt="toggle view"
+          class="toggleImg"
+          data-testid="toggle"
+          src="assets/icon-grid.svg"
+        />
+      </a>
     </div>
     <div
       class="songs"

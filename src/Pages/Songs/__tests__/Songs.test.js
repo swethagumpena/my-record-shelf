@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
@@ -28,20 +29,19 @@ describe(Songs.name, () => {
   });
 
   test('should match snapshot', () => {
-    const { container } = render(<Songs songs={mockSongs} />);
+    const { container } = render(<BrowserRouter><Songs songs={mockSongs} /></BrowserRouter>);
     expect(container).toMatchSnapshot();
   });
 
   test('should display all songs', () => {
-    render(<Songs songs={mockSongs} />);
+    render(<BrowserRouter><Songs songs={mockSongs} /></BrowserRouter>);
     expect(screen.getByText('all songs'));
   });
 
-  test('should display a T button', () => {
+  test('should display a button to toggle view', () => {
     render(<BrowserRouter><Songs songs={mockSongs} /></BrowserRouter>);
-    const genreElement = screen.getByText('T');
-    expect(genreElement.tagName).toBe('BUTTON');
-    fireEvent.click(genreElement);
+    const songElement = screen.getByTestId('toggle');
+    fireEvent.click(songElement);
     expect(document.location.href).toBe('http://localhost/genres');
   });
 });
