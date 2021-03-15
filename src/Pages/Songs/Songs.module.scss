@@ -1,0 +1,25 @@
+@import "../../styles/styles.scss";
+
+.songsContainer {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 100rem;
+    padding: 0;
+    justify-content: center;
+}
+
+.heading{
+    padding: 2rem 2rem 2rem 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+p{
+    margin: 0;
+}

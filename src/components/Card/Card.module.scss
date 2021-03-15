@@ -5,15 +5,19 @@
     border-radius: 1.25rem;
     // box-shadow: 0rem 0rem 0.25rem #9a9a9a;
     // width: calc((100% - (8 * 0.125rem + 8 * 0.5rem)) / 4);
-    width: 21rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
     border: 0.125rem solid lightgrey;
     align-items: flex-start;
-    // background-color: $primary-background-color;
+    background-color:#DFDFDF;
     // color: $primary-text-color;
     font-family: 'Poppins', sans-serif;
 
+}
+
+.card:nth-child(2n) {
+    background-color:#ABABAB;
 }
 
 .card img{
